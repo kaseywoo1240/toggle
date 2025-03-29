@@ -1,0 +1,53 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.theme-toggle {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.toggle-checkbox {
+    display: none;
+}
+
+.toggle-label {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: background-color 0.3s;
+    width: 60px;
+    height: 34px;
+}
+
+.toggle-label::before {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    background-color: #fff;
+    border-radius: 50px;
+    transition: transform 0.3s, background-color 0.3s;
+    left: 4px;
+    top: 4px;
+}
+
+.toggle-checkbox:checked + .toggle-label {
+    background-color: #2196f3;
+}
+
+.toggle-checkbox:checked + .toggle-label::before {
+    transform: translate(26px);
+    background-color: #000;
+}
+
+.dark-mode {
+    background-color: #222;
+    color: #fff
+}
